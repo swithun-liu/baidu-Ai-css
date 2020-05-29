@@ -1,19 +1,59 @@
 /*###############################背景图片#################################  */
 html body {
     color: #eee;
-    background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4204780978,2668555092&fm=26&gp=0.jpg);
+    /*background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4204780978,2668555092&fm=26&gp=0.jpg);*/
+    /*background-image: url(https://c-ssl.duitang.com/uploads/item/201905/03/20190503124955_ymmfg.thumb.700_0.gif);*/
+    background-image: url(http://dingyue.ws.126.net/TVJW0uNGJdAbCAJXYPrgJieM=99dYXdw0vR1DcOSUG6v31558184454549.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: center;
     background-attachment: fixed;
 }
 
+/*访问过的连接*/
+a:visited{
+    color: #ff8000 !important;
+}
 
+/*######################搜索框候选结果##########################*/
+.bdsug {
+    background-image: initial;
+    background-color: rgba(20, 20, 20, .43);
+    border-top-color: rgba(189, 185, 177, 0);
+    border-right-color: rgba(189, 185, 177, 0);
+    border-bottom-color: rgba(189, 185, 177, 0);
+    border-left-color: rgba(189, 185, 177, 0);
+    box-shadow: rgba(213, 209, 203, 0) 1px 1px 3px;
+    border-radius: 15px;
 
+}
+.bdsug .bdsug-feedback-wrap {
+    background-image: initial;
+    background-color: rgba(222, 219, 213, 0);
+    color: rgb(108, 108, 108);
+
+}
+
+#form{
+    background: #5959594a !important;
+}
+
+.bdsug li {
+
+    background: #5959594a;
+    width: 522px;
+    color: #e5e5e5;
+    font: 14px arial;
+    line-height: 22px;
+    padding: 0 8px;
+    position: relative;
+    cursor: default;
+    backdrop-filter: blur(15px);
+}
 /* ##############################导航栏############################# */
 #head {
     background: #5959594a;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     border-bottom: 4px solid #48484863;
     border-left: 4px solid #48484863;
     border-right: 4px solid #48484863;
@@ -21,23 +61,22 @@ html body {
     margin: 0;
     padding: 0;
 }
-
 .fm {
     margin: 3px;
 }
 
-/* 删掉百度的logo */
+/* ###################删掉百度的logo######################## */
 #result_logo img {
     width: 0;
 }
 
-/* 搜索框往右移动 */
+/* ###################搜索框往右移动###################### */
 .s_form {
     height: 10px;
     padding: 0px 123px 6px 109px;
 }
 
-/* 搜索框加圆角 */
+/* #####################搜索框加圆角##################### */
 .s_ipt_wr.bg,
 .s_btn_wr.bg,
 #su.bg {
@@ -45,12 +84,12 @@ html body {
     padding-left: 10px;
 }
 
-/* 搜索框文字颜色 */
+/* #######################搜索框文字颜色#################### */
 #kw {
     color: #fff;
 }
 
-/* 按图搜索的按钮 */
+/* ######################按图搜索的按钮########################## */
 .soutu-btn {
     background: #54545400;
     color: #66d8ea;
@@ -60,7 +99,7 @@ html body {
     border-radius: 10px;
 }
 
-/* 百度一下按钮 */
+/* #########################百度一下按钮######################## */
 #form {
     display: flex;
     height: 100%;
@@ -72,13 +111,13 @@ html body {
     align-self: center;
     color: #3ccac2;
 }
-/* 百度一下按钮指针放上去 */
+/* ############################百度一下按钮指针放上去######################## */
 .s_btn.btnhover {
     background: #5e5e5e88;
     border: 3px solid #95959588;
     box-shadow: 0px 0px 0px #000;
 }
-/* head bar右边的 百度首页, 设置啥的 */
+/* #########################head bar右边的 百度首页, 设置啥的##################### */
 #u {
     vertical-align: middle;
 }
@@ -100,7 +139,7 @@ html body {
     float: none;
     zoom: 1;
     background: #545454aa;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
 }
 #s_tab a,
 #s_tab b {
@@ -113,7 +152,7 @@ html body {
     border-bottom: 2px solid #3ccac2;
     border-radius: 2px;
 }
-/* 为您找到多少结果 */
+/* #################为您找到多少结果############################## */
 .nums {
     color: #ccc;
 }
@@ -125,37 +164,7 @@ html body {
     color: #cacaca;
 }
 
-/*######################搜索结果 ########################### */
-/* 结果中的文字 */
-em {
-    font-style: normal;
-    color: #ff7e7e;
-}
-a:-webkit-any-link {
-    color: #3ccac2;
-    cursor: pointer;
-    text-decoration: none;
-}
 
-#content_left {
-    width: 60%;
-}
-
-/* 搜索结果加背景 */
-#content_left .result-op,
-#content_left .result {
-    width: 100%;
-    margin-bottom: 14px;
-    border-collapse: collapse;
-    border-radius: 10px;
-    background: linear-gradient(145deg, #20202075, #5e5e5e00);
-    padding: 10px;
-}
-/* 搜索结果日期颜色 */
-.m,
-a.m {
-    color: #b5b5b5;
-}
 
 /* ######################底部########################### */
 #rs,
@@ -190,12 +199,63 @@ a.m {
     display: none;
 }
 
+/*######################搜索结果 ########################### */
+/* 结果中的文字 */
+em {
+    font-style: normal;
+    color: #ff7e7e;
+}
+a:-webkit-any-link {
+    color: #3ccac2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#content_left {
+    width: 80%;
+}
+/* 搜索结果加背景 */
+#content_left .result-op,
+#content_left .result {
+    width: 100%;
+    margin-bottom: 14px;
+    border-radius: 10px;   
+    padding: 10px;
+    backdrop-filter: blur(30px);
+    background-image: url(https://c-ssl.duitang.com/uploads/item/201905/03/20190503124955_ymmfg.thumb.700_0.gif);
+    background-image: url(http://dingyue.ws.126.net/TVJW0uNGJdAbCAJXYPrgJieM=99dYXdw0vR1DcOSUG6v31558184454549.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+#content_left .result-op:before,
+#content_left .result:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    background: rgba(66, 66, 66, .71);
+    background: #595959a3;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(30px);
+    border-radius: 10px; 
+} 
+/* 搜索结果日期颜色 */
+.m,
+a.m {
+    color: #b5b5b5;
+}
 
 /* #######################整个页面毛玻璃########################## */
 #container {
     width: 100%;
-    background: #545454aa;
-    backdrop-filter: blur(10px);
+    background-color: #00000000;
+    background-color:#4d4d4d7d;
+    backdrop-filter: blur(3px);
 }
 
 /* ###################滚动条样式############################### */
