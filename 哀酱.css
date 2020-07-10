@@ -1,21 +1,95 @@
 /*###############################背景图片#################################  */
-html body {
-    color: #eee;
-    /*background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4204780978,2668555092&fm=26&gp=0.jpg);*/
-    /*background-image: url(https://c-ssl.duitang.com/uploads/item/201905/03/20190503124955_ymmfg.thumb.700_0.gif);*/
-    background-image: url(http://dingyue.ws.126.net/TVJW0uNGJdAbCAJXYPrgJieM=99dYXdw0vR1DcOSUG6v31558184454549.jpg);
+html body,.result-op,#content_left .result {
+	/* 背景在这里替换*/
+    background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593363433720&di=7a89de81cde882ac044a5cab50e0f6af&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180816%2F20180816024946_e18d893230d42d268fdf54594b0e8f0e_2.jpeg);
+
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     background-position: center;
     background-attachment: fixed;
+    
 }
 
-/*访问过的连接*/
+#content_right{
+    display: none;
+}
+
+html body {
+    color: #eee;
+
+}
+/* #######################整个页面毛玻璃########################## */
+#container {
+    width: 100%;
+    background-color:#4a4a4ab3;
+    backdrop-filter: blur(4px);
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 10px;
+    box-shadow:  0px 10px 16px #000000a6;
+    
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    justify-content: center;
+}
+
+
+/*######################搜索结果 ########################### */
+#content_left {
+    width: 80%;
+    padding: 0;
+    padding-left:0 !important;
+}
+/* 搜索结果加背景 */
+#content_left .result-op,
+#content_left .result {
+    width: 95%;
+    margin:30px;
+    margin-bottom: 14px;
+    border-radius: 10px;   
+    padding: 10px 20px 10px 20px;
+    backdrop-filter: blur(0px);
+    box-shadow:  6px 6px 6px #0000002e, 
+             -6px -6px 6px #ffffff1f,
+              3px 3px 3px #00000014, 
+             -3px -3px 3px #ffffff1f;
+}
+#content_left .result-op:before,
+#content_left .result:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    background: #45454594;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(60px);
+    border-radius: 9px; 
+}
+/* 结果中的文字 */
+em {
+    font-style: normal;
+    color: #ff7e7e;
+}
+a:-webkit-any-link {
+    color: #3ccac2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* #############*/
+
+
 a:visited{
     color: #ff8000 !important;
 }
 
-/*######################搜索框候选结果##########################*/
+#content_right,.cr-offset{
+    width:0 !important;
+}
+
 .bdsug {
     background-image: initial;
     background-color: rgba(20, 20, 20, .43);
@@ -33,13 +107,11 @@ a:visited{
     color: rgb(108, 108, 108);
 
 }
-
 #form{
-    background: #5959594a !important;
+
+    background: #59595900 !important;
 }
-
 .bdsug li {
-
     background: #5959594a;
     width: 522px;
     color: #e5e5e5;
@@ -50,46 +122,37 @@ a:visited{
     cursor: default;
     backdrop-filter: blur(15px);
 }
+
 /* ##############################导航栏############################# */
-#head {
+#head{
     background: #5959594a;
     backdrop-filter: blur(15px);
-    border-bottom: 4px solid #48484863;
-    border-left: 4px solid #48484863;
-    border-right: 4px solid #48484863;
     border-radius: 10px;
     margin: 0;
     padding: 0;
 }
-.fm {
-    margin: 3px;
-}
 
-/* ###################删掉百度的logo######################## */
+/* 删掉百度的logo */
 #result_logo img {
     width: 0;
 }
 
-/* ###################搜索框往右移动###################### */
-.s_form {
-    height: 10px;
-    padding: 0px 123px 6px 109px;
-}
 
-/* #####################搜索框加圆角##################### */
+/* 搜索框加圆角 */
 .s_ipt_wr.bg,
 .s_btn_wr.bg,
 #su.bg {
     border-radius: 20px;
     padding-left: 10px;
+    border-color:#ffffff52;
 }
 
-/* #######################搜索框文字颜色#################### */
+/* 搜索框文字颜色 */
 #kw {
     color: #fff;
 }
 
-/* ######################按图搜索的按钮########################## */
+/* 按图搜索的按钮 */
 .soutu-btn {
     background: #54545400;
     color: #66d8ea;
@@ -99,25 +162,21 @@ a:visited{
     border-radius: 10px;
 }
 
-/* #########################百度一下按钮######################## */
+/* 百度一下按钮 */
 #form {
     display: flex;
     height: 100%;
 }
 .s_btn {
-    background: #00000088;
-    border: 3px solid #66666688;
-    margin: 0 auto;
-    align-self: center;
     color: #3ccac2;
 }
-/* ############################百度一下按钮指针放上去######################## */
+/* 百度一下按钮指针放上去 */
 .s_btn.btnhover {
-    background: #5e5e5e88;
+    background: #5e5e5e69;
     border: 3px solid #95959588;
-    box-shadow: 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px #fff;
 }
-/* #########################head bar右边的 百度首页, 设置啥的##################### */
+/* head bar右边的 百度首页, 设置啥的 */
 #u {
     vertical-align: middle;
 }
@@ -138,7 +197,7 @@ a:visited{
     padding: 55px 0 0 121px;
     float: none;
     zoom: 1;
-    background: #545454aa;
+    background: #575757aa !important;
     backdrop-filter: blur(30px);
 }
 #s_tab a,
@@ -152,7 +211,11 @@ a:visited{
     border-bottom: 2px solid #3ccac2;
     border-radius: 2px;
 }
-/* #################为您找到多少结果############################## */
+.s_tab_inner{
+    padding-top:7px;
+}
+
+/* 为您找到多少结果 */
 .nums {
     color: #ccc;
 }
@@ -166,97 +229,43 @@ a:visited{
 
 
 
+
 /* ######################底部########################### */
-#rs,
-#page a,
-#page a,
-#page strong,
-#foot,
-#foot span {
-    background: #54545400;
-}
 
-#foot {
-    margin-top: 0;
-    background: #545454aa;
+#page{
+    background-color: #4141418a !important;
     backdrop-filter: blur(10px);
-    border: 0;
+    margin:0 !important;
 }
-
-#page {
-    margin: 0;
+#rs{
+    background-color:#00000000 !important;
+}
+#foot {
+    margin: 20px;
+    margin-bottom: 0;
+    background: #4a4a4ac4 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow:  5px 5px 6px #0000001f, 
+             -5px -5px 6px #fff3;
+}
+#foot #help{
+    background-color:#00000000 !important;
 }
 
 /* 下面12345678页的按钮 */
-#page .n,
-#page .pc {
-    border-radius: 10px;
-    border: 2px solid #6a6a6a75;
-}
-#page .fkd .c-icon-bear-pn,
-#page .fk .c-icon-bear-pn,
-#page .fk_cur .c-icon-bear-p {
-    display: none;
-}
 
-/*######################搜索结果 ########################### */
-/* 结果中的文字 */
-em {
-    font-style: normal;
-    color: #ff7e7e;
-}
-a:-webkit-any-link {
-    color: #3ccac2;
-    cursor: pointer;
-    text-decoration: none;
-}
 
-#content_left {
-    width: 80%;
-}
-/* 搜索结果加背景 */
-#content_left .result-op,
-#content_left .result {
-    width: 100%;
-    margin-bottom: 14px;
-    border-radius: 10px;   
-    padding: 10px;
-    backdrop-filter: blur(30px);
-    background-image: url(https://c-ssl.duitang.com/uploads/item/201905/03/20190503124955_ymmfg.thumb.700_0.gif);
-    background-image: url(http://dingyue.ws.126.net/TVJW0uNGJdAbCAJXYPrgJieM=99dYXdw0vR1DcOSUG6v31558184454549.jpg);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center;
-    background-attachment: fixed;
-}
-#content_left .result-op:before,
-#content_left .result:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top:0;
-    background: rgba(66, 66, 66, .71);
-    background: #595959a3;
-    height: 100%;
-    z-index: -1;
-    backdrop-filter: blur(30px);
-    border-radius: 10px; 
-} 
+   
 /* 搜索结果日期颜色 */
 .m,
 a.m {
     color: #b5b5b5;
 }
 
-/* #######################整个页面毛玻璃########################## */
-#container {
-    width: 100%;
-    background-color: #00000000;
-    background-color:#4d4d4d7d;
-    backdrop-filter: blur(3px);
-}
+
 
 /* ###################滚动条样式############################### */
 ::-webkit-scrollbar {
