@@ -1,12 +1,17 @@
 /*###############################背景图片#################################  */
 html body,.result-op,#content_left .result {
 	/* 背景在这里替换*/
-    background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593363433720&di=7a89de81cde882ac044a5cab50e0f6af&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180816%2F20180816024946_e18d893230d42d268fdf54594b0e8f0e_2.jpeg);
+    background-image:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpicnew8.photophoto.cn%2F20131008%2Fjianbiansebeijingsucaitupian-12902037_1.jpg&refer=http%3A%2F%2Fpicnew8.photophoto.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624333337&t=59fdf155afd8f09c58b0f200de5ed5b9);
 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     background-attachment: fixed;
+    
+    --main-bg-color: #b4b4b475;
+    --main-text-green: #297d6c;
+    --main-text-blue: #0048ffcf;
+    
     
 }
 
@@ -21,12 +26,12 @@ html body {
 /* #######################整个页面毛玻璃########################## */
 #container {
     width: 100%;
-    background-color:#4a4a4ab3;
+    background-color:var(--main-bg-color);
     backdrop-filter: blur(4px);
     border-radius: 0px 0px 20px 20px;
     padding-bottom: 10px;
     box-shadow:  0px 10px 16px #000000a6;
-    
+    margin-left: 0px !important;
     display: flex;
     flex-flow: column;
     align-items:center;
@@ -44,7 +49,6 @@ html body {
 #content_left .result-op,
 #content_left .result {
     width: 95%;
-    margin:30px;
     margin-bottom: 14px;
     border-radius: 10px;   
     padding: 10px 20px 10px 20px;
@@ -62,7 +66,7 @@ html body {
     left: 0;
     right: 0;
     top:0;
-    background: #45454594;
+    background: var(--main-bg-color);
     height: 100%;
     z-index: -1;
     backdrop-filter: blur(60px);
@@ -74,7 +78,7 @@ em {
     color: #ff7e7e;
 }
 a:-webkit-any-link {
-    color: #3ccac2;
+    color: var(--main-text-blue);
     cursor: pointer;
     text-decoration: none;
 }
@@ -88,6 +92,10 @@ a:visited{
 
 #content_right,.cr-offset{
     width:0 !important;
+}
+
+.s_ipt {
+    color: black !important;
 }
 
 .bdsug {
